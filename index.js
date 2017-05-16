@@ -6,7 +6,7 @@ module.exports = ($, router) => {
 
 		_l('webhook');
 
-		require('child_process').spawn('sh', [$.pa('webhook.sh')]);
+		require('child_process').spawn('sh', ['-x', $.pa('webhook.sh')]);
 
 		ctx.body = 'webhook';
 	});
