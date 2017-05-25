@@ -1,4 +1,4 @@
-module.exports = ($, router) => {
+module.exports = async($, router) => {
 	let time = new Date();
 
 	router.post('/push', async(ctx, next) => {
@@ -6,7 +6,7 @@ module.exports = ($, router) => {
 
 		_l('webhook');
 
-		// require('child_process').spawn('sh', ['-x', $.pa('webhook.sh')]);
+		require('child_process').spawn('sh', [$.pa('webhook.sh')]);
 
 		ctx.body = 'webhook';
 	});
