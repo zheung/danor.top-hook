@@ -4,7 +4,7 @@ module.exports = async($, router) => {
 	router.post('/push', async(ctx, next) => {
 		await next();
 
-		_l('webhook');
+		L('webhook');
 
 		require('child_process').spawn('sh', [$.pa('webhook.sh')]);
 
