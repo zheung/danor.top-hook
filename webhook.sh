@@ -2,7 +2,7 @@ date +"%y-%m-%d %H:%M:%S" 1>/root/logs/kq/bsh.log
 
 pm2 stop /root/serv/index.js 1>>/root/logs/kq/bsh.log 2>>/root/logs/kq/bsh.log
 
-sevice mongod start
+service mongod restart
 
 eval `ssh-agent` 1>>/root/logs/kq/bsh.log 2>>/root/logs/kq/bsh.log
 
